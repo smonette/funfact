@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/smonette/funfact/issues"
   },
-  "homepage": "https://github.com/smonette/funfact"
+  "homepage": "https://github.com/smonette/funfact",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "pg": "^4.4.3",
+    "sequelize": "^3.12.1",
+    "sequelize-cli": "^2.0.0"
+  }
 }
