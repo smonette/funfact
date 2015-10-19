@@ -17,14 +17,19 @@ app.get('/', function (req, res) {
 });
 
 
+// Submit the fact
 
-// ERROR PAGE
+app.post('/create', function(req,res){
+  // have to call my create new user functions
+  db.fact.createNewUser(req.body.fact, req.body.password,
+    function(err){
+      res.render("index", { message: err.message, email: req.body.citation});
+    },
+    function(success){
+      res.render('index', {message: "Success! "});
+    });
 
-app.get('/*', function (req, res) {
-  res.render('site/404');
 });
-
-
 
 
 
