@@ -1,22 +1,20 @@
 .masonry-item {
   background: #fff;
-  border: 1px solid #666;
+  border: 1px solid #eee;
   padding: rem-px(20px);	
   text-align: center;
 }
 
 .masonry-sizer,
 .masonry-item { 
-  width: 31%;
-  margin-bottom: 10px;
+  width: 33%;
   @include media($mobile-only) {
     width: 100%;
   } 
 }
 
 
-
-
+// FACT TYPE
 .funfact-fact {
   font-size: rem-px(24px);
 }

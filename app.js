@@ -10,6 +10,14 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}) );
 
+var ogs = require('open-graph-scraper');
+
+
+// var cards = db.fact.findAll({attributes: ['name']})
+ogs(
+  { url: 'http://en.wikipedia.org/wiki/Dell' }, // Settings object first
+  function(er, res) { console.log(er, res); }  // Callback 
+);
 
 
 // SITE FILES
@@ -17,33 +25,28 @@ app.use(bodyParser.urlencoded({extended: true}) );
 app.get('/', function (req, res) {
   db.fact.findAll()
   .then(function(facts){
-    res.render('index', {facts: facts, message:'Post a cool fact!'})
+    res.render('index', {
+      facts: facts, 
+
+      message:''
+    })
   })
 });
 
-
-
-
-// Submit the fact
 
 app.post('/create', function(req,res){
   // have to call my create new user functions
   db.fact.createNewFact(req.body.fact, req.body.citation,
     function(err){
-      db.fact.findAll()
-      .then(function(facts){
-        res.render('index', {facts: facts, message: "NOOOO!"})
-      })
+      console.log('NOO')
     },
     function(success){
-      db.fact.findAll()
-      .then(function(facts){
-        res.render('index', {facts: facts, message: "Success! "})
-      })
+      res.redirect('/');
     }
   );
 
 });
+
 
 
 http.listen(process.env.PORT || 4000, function(){

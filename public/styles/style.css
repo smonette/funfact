@@ -118,14 +118,13 @@ header {
 
 .masonry-item {
   background: #fff;
-  border: 1px solid #666;
+  border: 1px solid #eee;
   padding: 1.25rem;
   text-align: center; }
 
 .masonry-sizer,
 .masonry-item {
-  width: 31%;
-  margin-bottom: 10px; }
+  width: 33%; }
   @media screen and (max-width: 47.9375rem) {
     .masonry-sizer,
     .masonry-item {

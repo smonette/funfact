@@ -1,6 +1,9 @@
 <ul class="masonry-container">
-  <% for(i=0; i < facts.length; i++) { %>
+  <li class="masonry-sizer">
+  </li>
+  <% for(i=0; i < facts.reverse().length; i++) { %>
     <li class="masonry-item">
+      <p>Fact #<%= i+1 %></p>
       <div class="funfact-fact">  	
 	      <%= facts[i].fact %>
       </div>
@@ -9,6 +12,7 @@
       <div class="funfact-citation">      	
         <a href="<%= facts[i].citation %>"> Read More &raquo;</a>
       </div>
+
       <% } %>
     </li>
   <% } %>

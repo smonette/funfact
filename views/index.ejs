@@ -16,8 +16,8 @@
     </header>
 
     <div class="content row">
-      <% include partials/_form.ejs%>
-      
+<!--       <% include partials/_form.ejs%>
+ -->      
       <% include partials/_masonry.ejs%>
 
       </div> <!-- end content -->
@@ -29,10 +29,10 @@
       </footer>
     <script src="/../js/masonry.min.js"></script>
     <script>
-      $(window).load(function() {
+      $(document).ready(function() {
         $('.masonry-container').masonry({
           itemSelector: '.masonry-item',
-          gutter: 40
+          gutter: 20
         });
       });
     </script>
