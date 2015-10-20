@@ -1,1 +1,8 @@
-Here's the tile work!
+<ul>
+  <% for(i=0; i < facts.length; i++) { %>
+    <li>
+      <%= facts[i].fact %>
+      <a href="<%= facts[i].citation %>"> Read More &raquo;</a>
+    </li>
+  <% } %>
+</ul>

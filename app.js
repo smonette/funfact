@@ -15,8 +15,13 @@ app.use(bodyParser.urlencoded({extended: true}) );
 // SITE FILES
 
 app.get('/', function (req, res) {
-  res.render('index');
+  db.fact.findAll()
+  .then(function(facts){
+    res.render('index', {facts: facts})
+  })
 });
+
+
 
 
 // Submit the fact
@@ -25,20 +30,24 @@ app.post('/create', function(req,res){
   // have to call my create new user functions
   db.fact.createNewFact(req.body.fact, req.body.citation,
     function(err){
-      res.render("index", { message: "NOO" });
+      db.fact.findAll()
+      .then(function(facts){
+        res.render('index', {facts: facts, message: "NOOOO!"})
+      })
     },
     function(success){
-      res.render('index', {message: "Success! "});
-    });
+      db.fact.findAll()
+      .then(function(facts){
+        res.render('index', {facts: facts, message: "Success! "})
+      })
+    }
+  );
 
 });
 
 
-
-
-
-http.listen(process.env.PORT || 3000, function(){
-  console.log("local hosties");
+http.listen(process.env.PORT || 4000, function(){
+  console.log("local hosties on 4000");
 });
 
 module.exports = app;
