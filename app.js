@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}) );
 app.get('/', function (req, res) {
   db.fact.findAll()
   .then(function(facts){
-    res.render('index', {facts: facts})
+    res.render('index', {facts: facts, message:'Post a cool fact!'})
   })
 });
 
