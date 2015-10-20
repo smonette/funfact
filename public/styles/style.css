@@ -1,0 +1,138 @@
+/*
+
+Rem/Px Function
+---
+This is a fun one. If we support rems, calculate rems according to a pixel
+value. If not, just spit out the pixel value. This means we can detect rem
+support and spit out the stylesheet accordingly, all while writing only one
+codebase.
+
+*/
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  display: block; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, noscript, ol, output, p, pre, section, table, tfoot, ul, video {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #eee; }
+
+.row {
+  max-width: 75rem;
+  margin: 0 auto; }
+
+header {
+  background: #fff;
+  padding: 1.25rem 0; }
+
+.site-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center; }
+
+.funfact-form {
+  text-align: center;
+  padding: 2.5rem 0; }
+
+.funfact-form-group {
+  margin-bottom: 1.25rem; }
+
+.masonry-item {
+  background: #fff;
+  border: 1px solid #666;
+  padding: 1.25rem;
+  text-align: center; }
+
+.masonry-sizer,
+.masonry-item {
+  width: 31%;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 47.9375rem) {
+    .masonry-sizer,
+    .masonry-item {
+      width: 100%; } }
+
+.funfact-fact {
+  font-size: 1.5rem; }
+
+.funfact-citation {
+  margin-top: 1.25rem; }

@@ -3,28 +3,38 @@
   <head>
     <title>FUNFACT</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/../styles/style.css">
   </head>
 
 
   <body>
-    <h1 class="site-title">PAGE TITLE</h1>
 
     <header>
-      HEADER
+      <div class="row">
+        <h1 class="site-title">Funfact!</h1>
+      </div>
     </header>
 
-    <div class="content">
+    <div class="content row">
       <% include partials/_form.ejs%>
-        
-		  Here's the page!
       
       <% include partials/_masonry.ejs%>
 
       </div> <!-- end content -->
-    <footer>
-      
-	   FOOTER
-
-    </footer>
+      <footer>
+        <div class="row">
+          
+      	   FOOTER
+        </div>
+      </footer>
+    <script src="/../js/masonry.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $('.masonry-container').masonry({
+          itemSelector: '.masonry-item',
+          gutter: 40
+        });
+      });
+    </script>
   </body>
 </html>

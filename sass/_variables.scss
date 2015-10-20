@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$font-sans: 'Lato', sans-serif;
+
+// BREAKPOINTS
+$mobile-range:        rem-px(0px) rem-px(767px);
+$tablet-range:        rem-px(768px) rem-px(960px);
+$desktop-range:       rem-px(961px);
+$wide-desktop-range:  rem-px(1080px);
+
+$mobile-only:         new-breakpoint(max-width nth($mobile-range, 2));
+$up-to-tablet:        new-breakpoint(max-width rem-px(719px));
+$tablet-up:           new-breakpoint(nth($tablet-range, 1));
+$up-to-desktop:       new-breakpoint(max-width nth($tablet-range, 2));
+$desktop-only:        new-breakpoint(min-width nth($desktop-range, 1));
+$wide-desktop-up:     new-breakpoint(min-width nth($wide-desktop-range, 1));

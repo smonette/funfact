@@ -1,0 +1,9 @@
+body {
+	font-family: $font-sans;
+  background: #eee;
+}
+
+.row {
+	max-width: rem-px(1200px);
+	margin: 0 auto;
+}

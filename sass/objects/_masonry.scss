@@ -1,0 +1,25 @@
+.masonry-item {
+  background: #fff;
+  border: 1px solid #666;
+  padding: rem-px(20px);	
+  text-align: center;
+}
+
+.masonry-sizer,
+.masonry-item { 
+  width: 31%;
+  margin-bottom: 10px;
+  @include media($mobile-only) {
+    width: 100%;
+  } 
+}
+
+
+
+
+.funfact-fact {
+  font-size: rem-px(24px);
+}
+.funfact-citation {
+  margin-top: rem-px(20px);
+}

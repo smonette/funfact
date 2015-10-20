@@ -1,9 +1,14 @@
-<ul>
+<ul class="masonry-container">
   <% for(i=0; i < facts.length; i++) { %>
-    <li>
-      <%= facts[i].fact %>
+    <li class="masonry-item">
+      <div class="funfact-fact">  	
+	      <%= facts[i].fact %>
+      </div>
+
       <% if (facts[i].citation){ %>
+      <div class="funfact-citation">      	
         <a href="<%= facts[i].citation %>"> Read More &raquo;</a>
+      </div>
       <% } %>
     </li>
   <% } %>

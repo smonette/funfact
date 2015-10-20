@@ -1,15 +1,15 @@
 <p><%= message %></p>
 
-<form action="/create" method ="post">
-  <div class="form-group">
-    <label for="fact">fact:</label>
+<form action="/create" method ="post" class="funfact-form">
+  <div class="funfact-form-group">
+    <label for="fact">fact</label><br>
     <input type="text" class="form-control" name="fact" id="fact" required>
   </div>
-   <div class="form-group">
-    <label for="citation">citation:</label>
+   <div class="funfact-form-group">
+    <label for="citation">citation</label><br>
     <input type="text" class = "form-control" name="citation" id="citation">
   </div>
-  <div class="form-group">
-    <input type="submit" value="Sign Up" class ="btn btn-primary">
+  <div class="funfact-form-group">
+    <input type="submit" value="Share your fact!" class ="btn btn-primary">
   </div>
 </form>
